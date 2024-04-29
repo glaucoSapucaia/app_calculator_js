@@ -16,16 +16,115 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+
+        <!-- CSS style -->
+        <style>
+            /* calculadora */
+            .calculadora {
+                margin-top: 40px;
+                border: 1px solid #000;
+                padding: 20px;
+                background-color: #2e2e2e;
+                border-radius: 10px;
+                box-shadow: 1px 1px 5px #000;
+            }
+
+            /* btns */
+            .btn {
+                width: 60px;
+                height: 50px;
+                margin: 5px;
+                box-shadow: 1px 1px 1px #000;
+            }
+
+            .clear {
+                width: 130px;
+            }
+
+            .enter {
+                height: 110px;
+            }
+
+            .zero {
+                width: 130px;
+            }
+
+            /* display */
+            .resultado {
+                text-align: right;
+                font-size: 20px;
+                margin-top: 10px;
+                margin-bottom: 20px;
+                border: 1px solid #000;
+                box-shadow: 1px 1px 1px #000;
+            }
+
+        </style>
+
     </head>
 
-    <body>
-        <header>
-            <!-- place navbar here -->
-        </header>
-        <main></main>
-        <footer>
-            <!-- place footer here -->
-        </footer>
+    <body style="background: #d9d9d9;">
+        <!-- container start -->
+        <div class="container">
+            <!-- row start -->
+            <div class="row">
+                <!-- col start -->
+                <div class="col d-flex justify-content-center">
+                    <br>
+                    <!-- calculadora start -->
+                    <div class="calculadora">
+                        <input type="text" class="form-control resultado" placeholder="0" disabled>
+
+                        <!-- row 1 start -->
+                        <div class="row">
+                            <button type="button" class="btn btn-dark btn-lg clear font-weight-light">C</button>
+                            <button type="button" class="btn btn-dark btn-lg font-weight-light">/</button>
+                            <button type="button" class="btn btn-dark btn-lg font-weight-light">x</button>
+                        </div>
+                        <!-- row 1 end -->
+
+                        <!-- row 2 start -->
+                        <div class="row">
+                            <button type="button" class="btn btn-dark btn-lg font-weight-light">7</button>
+                            <button type="button" class="btn btn-dark btn-lg font-weight-light">8</button>
+                            <button type="button" class="btn btn-dark btn-lg font-weight-light">9</button>
+                            <button type="button" class="btn btn-dark btn-lg font-weight-light">-</button>
+                        </div>
+                        <!-- row 2 end -->
+
+                        <!-- row 3 start -->
+                        <div class="row">
+                            <button type="button" class="btn btn-dark btn-lg font-weight-light">4</button>
+                            <button type="button" class="btn btn-dark btn-lg font-weight-light">5</button>
+                            <button type="button" class="btn btn-dark btn-lg font-weight-light">6</button>
+                            <button type="button" class="btn btn-dark btn-lg font-weight-light">*</button>
+                        </div>
+                        <!-- row 3 end -->
+
+                        <!-- row 4 start -->
+                        <div class="row">
+                            <button type="button" class="btn btn-dark btn-lg font-weight-light">1</button>
+                            <button type="button" class="btn btn-dark btn-lg font-weight-light">2</button>
+                            <button type="button" class="btn btn-dark btn-lg font-weight-light">3</button>
+                            <button type="button" class="btn btn-dark btn-lg enter">=</button>
+                        </div>
+                        <!-- row 4 end -->
+
+                        <!-- row 5 start -->
+                        <div class="row" style="margin-top: -60px;">
+                            <button type="button" class="btn btn-dark btn-lg font-weight-light zero">0</button>
+                            <button type="button" class="btn btn-dark btn-lg font-weight-light">.</button>
+                        </div>
+                        <!-- row 5 end -->
+                    </div>
+                    <!-- calculadora end -->
+                </div>
+                <!-- col end -->
+            </div>
+            <!-- row end -->
+        </div>
+        <!-- container end -->
+
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
