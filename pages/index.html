@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>Calculator - Sapucaia</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -77,43 +77,43 @@
 
                         <!-- row 1 start -->
                         <div class="row">
-                            <button type="button" class="btn btn-dark btn-lg clear font-weight-light">C</button>
-                            <button type="button" class="btn btn-dark btn-lg font-weight-light">/</button>
-                            <button type="button" class="btn btn-dark btn-lg font-weight-light">x</button>
+                            <button onclick="calcular('acao', 'c')" type="button" class="btn btn-dark btn-lg clear font-weight-light">C</button>
+                            <button onclick="calcular('acao', '/')" type="button" class="btn btn-dark btn-lg font-weight-light">/</button>
+                            <button onclick="calcular('acao', '*')" type="button" class="btn btn-dark btn-lg font-weight-light">x</button>
                         </div>
                         <!-- row 1 end -->
 
                         <!-- row 2 start -->
                         <div class="row">
-                            <button type="button" class="btn btn-dark btn-lg font-weight-light">7</button>
-                            <button type="button" class="btn btn-dark btn-lg font-weight-light">8</button>
-                            <button type="button" class="btn btn-dark btn-lg font-weight-light">9</button>
-                            <button type="button" class="btn btn-dark btn-lg font-weight-light">-</button>
+                            <button onclick="calcular('valor', '7')" type="button" class="btn btn-dark btn-lg font-weight-light">7</button>
+                            <button onclick="calcular('valor', '8')" type="button" class="btn btn-dark btn-lg font-weight-light">8</button>
+                            <button onclick="calcular('valor', '9')" type="button" class="btn btn-dark btn-lg font-weight-light">9</button>
+                            <button onclick="calcular('acao', '-')" type="button" class="btn btn-dark btn-lg font-weight-light">-</button>
                         </div>
                         <!-- row 2 end -->
 
                         <!-- row 3 start -->
                         <div class="row">
-                            <button type="button" class="btn btn-dark btn-lg font-weight-light">4</button>
-                            <button type="button" class="btn btn-dark btn-lg font-weight-light">5</button>
-                            <button type="button" class="btn btn-dark btn-lg font-weight-light">6</button>
-                            <button type="button" class="btn btn-dark btn-lg font-weight-light">*</button>
+                            <button onclick="calcular('valor', '4')" type="button" class="btn btn-dark btn-lg font-weight-light">4</button>
+                            <button onclick="calcular('valor', '5')" type="button" class="btn btn-dark btn-lg font-weight-light">5</button>
+                            <button onclick="calcular('valor', '6')" type="button" class="btn btn-dark btn-lg font-weight-light">6</button>
+                            <button onclick="calcular('acao', '+')" type="button" class="btn btn-dark btn-lg font-weight-light">+</button>
                         </div>
                         <!-- row 3 end -->
 
                         <!-- row 4 start -->
                         <div class="row">
-                            <button type="button" class="btn btn-dark btn-lg font-weight-light">1</button>
-                            <button type="button" class="btn btn-dark btn-lg font-weight-light">2</button>
-                            <button type="button" class="btn btn-dark btn-lg font-weight-light">3</button>
-                            <button type="button" class="btn btn-dark btn-lg enter">=</button>
+                            <button onclick="calcular('valor', '1')" type="button" class="btn btn-dark btn-lg font-weight-light">1</button>
+                            <button onclick="calcular('valor', '2')" type="button" class="btn btn-dark btn-lg font-weight-light">2</button>
+                            <button onclick="calcular('valor', '3')" type="button" class="btn btn-dark btn-lg font-weight-light">3</button>
+                            <button onclick="calcular('acao', '=')" type="button" class="btn btn-dark btn-lg enter">=</button>
                         </div>
                         <!-- row 4 end -->
 
                         <!-- row 5 start -->
                         <div class="row" style="margin-top: -60px;">
-                            <button type="button" class="btn btn-dark btn-lg font-weight-light zero">0</button>
-                            <button type="button" class="btn btn-dark btn-lg font-weight-light">.</button>
+                            <button onclick="calcular('valor', '0')" type="button" class="btn btn-dark btn-lg font-weight-light zero">0</button>
+                            <button onclick="calcular('acao', '.')" type="button" class="btn btn-dark btn-lg font-weight-light">.</button>
                         </div>
                         <!-- row 5 end -->
                     </div>
@@ -124,6 +124,13 @@
             <!-- row end -->
         </div>
         <!-- container end -->
+
+        <!-- js -->
+        <script>
+            function calcular(tipo, valor) {
+                console.log(tipo, valor)
+            }
+        </script>
 
         <!-- Bootstrap JavaScript Libraries -->
         <script
