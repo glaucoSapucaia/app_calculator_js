@@ -73,7 +73,8 @@
                     <br>
                     <!-- calculadora start -->
                     <div class="calculadora">
-                        <input type="text" class="form-control resultado" placeholder="0" disabled>
+                        <!-- resultado -->
+                        <input id="resultado" type="text" class="form-control resultado" placeholder="cálculo" disabled>
 
                         <!-- row 1 start -->
                         <div class="row">
@@ -128,7 +129,28 @@
         <!-- js -->
         <script>
             function calcular(tipo, valor) {
-                console.log(tipo, valor)
+                if (tipo === 'acao') {
+                    if (valor === 'c') {
+                        // limpar visor
+                        document.getElementById('resultado').value = ''
+                    }
+
+                    else if (
+                        valor === '+' || valor === '-' || valor === '/' || valor === '*' || valor === '.'
+                    ) {
+                        document.getElementById('resultado').value += valor
+                    }
+
+                    else if (valor === '=') {
+                        var valor_campo = document.getElementById('resultado').value
+                        console.log(valor_campo)
+                    }
+                }
+
+                else if (tipo === 'valor') {
+                    document.getElementById('resultado').value += valor
+                }
+
             }
         </script>
 
@@ -144,5 +166,6 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
+
     </body>
 </html>
